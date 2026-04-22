@@ -31,4 +31,4 @@ PostgreSQL · Git
 
 ## Files
 
-- `data_cleaning.sql` — the full script with comments throughout
+- `SQL DATA CLEANING PROJECT.sql` — the full script with comments throughout
