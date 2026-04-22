@@ -33,8 +33,9 @@ PostgreSQL · Git
 
 - `SQL DATA CLEANING PROJECT.sql` — the full script with comments throughout
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-#@ Tech Layoffs — Exploratory Data Analysis
+## Tech Layoffs — Exploratory Data Analysis
 
 Once the dataset was cleaned, I wanted to actually understand what happened. The tech industry went through a brutal wave of layoffs between 2020 and 2023 — this project digs into who was hit hardest, which industries suffered most, and how the numbers moved over time.
 
