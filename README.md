@@ -32,3 +32,32 @@ PostgreSQL · Git
 ## Files
 
 - `SQL DATA CLEANING PROJECT.sql` — the full script with comments throughout
+
+
+# Tech Layoffs — Exploratory Data Analysis
+
+Once the dataset was cleaned, I wanted to actually understand what happened. The tech industry went through a brutal wave of layoffs between 2020 and 2023 — this project digs into who was hit hardest, which industries suffered most, and how the numbers moved over time.
+
+## The data
+
+Source: [Kaggle — World Layoffs Dataset](https://www.kaggle.com/datasets/swaptr/layoffs-2022)
+
+The cleaned version from the companion [data cleaning project](https://github.com/JulesInData/layoffs-sql-data-cleaning). Around 2,300 layoff events from tech companies worldwide.
+
+## What I looked at
+
+I started simple — just exploring the range of the data, finding the max layoffs in a single event, and listing companies that shut down entirely (100% laid off).
+
+From there I moved into company and industry rankings. Which companies cut the most jobs in absolute terms? Which industries bled the most people overall? I used basic aggregation with `group by` and `order by` for most of this.
+
+The more interesting analysis came from breaking things down by year. I ranked companies by total layoffs per year using `dense_rank()` — which handles ties better than `rank()` — and wrapped it in a CTE so I could filter down to just the top 5 per year cleanly.
+
+The last piece was a rolling monthly total. I first built a CTE that summed layoffs by month, then ran a `sum() over(order by month)` window function on top of that to get a cumulative picture of how the damage accumulated. Watching that number climb through 2022 and into 2023 tells a very different story than looking at monthly snapshots alone.
+
+## Tools
+
+PostgreSQL · Git
+
+## Files
+
+- `eda_queries.sql` — the full script with comments throughout
