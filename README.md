@@ -60,4 +60,4 @@ PostgreSQL · Git
 
 ## Files
 
-- `eda_queries.sql` — the full script with comments throughout
+- `SQL EXPLORATORY DATA ANALYSIS PROJECT.sql` — the full script with comments throughout
